@@ -1,0 +1,17 @@
+Program Pzim ;
+VAR
+NUM_A,NUM_B:ARRAY [1..5] OF INTEGER;
+I:INTEGER;
+Begin
+  REPEAT
+    I:=I+1;
+    WRITELN('ESCREVA UM NÚMERO ',I,': ');
+    READ(NUM_A[I]);
+    NUM_B[6-I]:=NUM_A[I];
+  UNTIL(I=5);
+  FOR I:=1 TO 5 DO
+  BEGIN
+    WRITELN('OS VALORES DOS NÚMEROS DIGITADOS AO CONTRÁRIO SÃO: ',NUM_B[I]);
+  END;
+  READKEY;
+End.
